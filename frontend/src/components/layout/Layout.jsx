@@ -4,7 +4,7 @@ import MobileTopBar from './MobileTopBar.jsx';
 import MobileMenu from './MobileMenu.jsx';
 import MobileInfoPanel from './MobileInfoPanel.jsx';
 import { Linkedin, Twitter, Facebook, Instagram, Phone, Mail, MapPin } from 'lucide-react';
-import logo from "../../../src/assets/images/mybrand.png";
+import logo from "../../../src/assets/images/DipsOdyssey-Logo-Final.png";
 import Wblogo from "../../../src/assets/images/images-removebg-preview.png";
 export default function Layout({ children }) {
   const [stuck, setStuck] = useState(false);
