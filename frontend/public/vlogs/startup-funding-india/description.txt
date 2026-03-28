@@ -1,0 +1,21 @@
+INTRODUCTION
+The Indian startup ecosystem is at a pivotal crossroads as we enter 2026. After navigating a prolonged 'funding winter', signs of a thaw are emerging, but the capital landscape has fundamentally shifted. Investors are now prioritizing profitability and sustainable unit economics over growth-at-all-costs. This report analyzes the current sentiment among VCs, the sectors attracting fresh capital, and what this means for early-stage founders looking to raise their next round.
+
+KEY HIGHLIGHTS
+- Shift from GMV to EBITDA multiple valuations.
+- Rise of DeepTech and ClimateTech as favored sectors.
+- The return of late-stage mega-rounds.
+- Impact of domestic capital (family offices) on the ecosystem.
+
+DETAILED ANALYSIS
+The valuation corrections of the past two years have led to a healthier, more mature ecosystem. We are observing a distinct move away from vanity metrics. Startups that can demonstrate a clear path to profitability within 18-24 months are commanding premium valuations. The era of burning cash to acquire users is definitively over, replaced by a focus on customer retention and lifetime value.
+
+DeepTech, particularly in AI and semiconductor design, is seeing a surge in interest. Unlike consumer internet, these sectors offer defensible moats and long-term value creation. ClimateTech is also emerging as a major theme, driven by both policy incentives and corporate ESG mandates. We breakdown the specific sub-sectors within these broad themes that are heating up.
+
+Another significant trend is the increasing participation of domestic family offices in VC funds. This reduces reliance on foreign capital and provides a more stable, long-term capital base for Indian startups. We analyze how this shift in the LP (Limited Partner) base is influencing investment theses and timelines.
+
+EXPERT INSIGHTS
+"The market has reset to sanity. Founders who focused on building real businesses with real revenues during the downturn are now the ones dictating terms. It's a great time to build, provided your fundamentals are solid," notes Anjali Gupta, Managing Partner at Horizon Ventures.
+
+CONCLUSION
+While the funding 'party' of 2021 may not return, 2026 promises a sustainable spring for Indian startups. The focus on deep innovation and financial discipline will likely produce a stronger cohort of unicorns in the coming decade. Founders should focus on building enduring value, and the capital will follow.

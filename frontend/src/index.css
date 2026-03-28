@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* CSS Variables for Light/Dark Mode */
+:root {
+  /* Core text */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-ink: var(--color-text-primary);
+  --color-ink-soft: var(--color-text-secondary);
+
+  /* Surfaces */
+  --color-page-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-background: var(--color-page-bg);
+
+  /* Reusable card tokens */
+  --color-card-bg: #ffffff;
+  --color-card-bg-hover: #f8fafc;
+  --color-card-border: #dbe3ee;
+  --color-card-border-strong: #cbd5e1;
+
+  /* Icon tokens */
+  --color-icon-bg: #dbeafe;
+  --color-icon-fg: #1d4ed8;
+
+  /* Focus */
+  --color-focus-ring: #2563eb;
+}
+
+/* Dark mode class */
+.dark {
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-ink: var(--color-text-primary);
+  --color-ink-soft: var(--color-text-secondary);
+
+  --color-page-bg: #020617;
+  --color-surface: #0f172a;
+  --color-surface-elevated: #111827;
+  --color-background: var(--color-page-bg);
+
+  --color-card-bg: #111827;
+  --color-card-bg-hover: #1a2538;
+  --color-card-border: #243041;
+  --color-card-border-strong: #334155;
+
+  --color-icon-bg: #1e3a8a;
+  --color-icon-fg: #bfdbfe;
+
+  --color-focus-ring: #60a5fa;
+}
+
+@layer base {
+  body {
+    @apply text-ink bg-background min-h-screen;
+    transition: background-color 220ms ease, color 220ms ease;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white bg-brand hover:bg-brand-dark transition shadow-soft focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+  
+  .dark .btn-primary {
+    @apply focus:ring-offset-slate-800;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-brand border border-brand hover:bg-brand-light transition focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2;
+  }
+  
+  .dark .btn-outline {
+    @apply text-brand-light border-brand-light hover:bg-slate-700 focus:ring-offset-slate-800;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-ink bg-surface border border-gray-200 hover:bg-gray-50 transition shadow-soft focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2;
+  }
+  
+  .dark .btn-secondary {
+    @apply border-slate-600 hover:bg-slate-700 text-slate-200 focus:ring-offset-slate-800;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply rounded-xl border shadow-soft;
+    background-color: var(--color-card-bg);
+    border-color: var(--color-card-border);
+    color: var(--color-text-primary);
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  }
+
+  .card-elevated {
+    @apply card shadow-elevate;
+  }
+
+  .card-interactive {
+    @apply hover:shadow-elevate;
+  }
+
+  .card-interactive:hover {
+    background-color: var(--color-card-bg-hover);
+    border-color: var(--color-card-border-strong);
+  }
+
+  .card-icon-wrap {
+    @apply h-10 w-10 rounded-full flex items-center justify-center;
+    background-color: var(--color-icon-bg);
+    transition: background-color 220ms ease;
+  }
+
+  .card-icon {
+    color: var(--color-icon-fg);
+    transition: color 220ms ease;
+  }
+
+  .card-chip {
+    @apply border rounded-full;
+    background-color: var(--color-card-bg);
+    border-color: var(--color-card-border);
+    color: var(--color-text-primary);
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease;
+  }
+
+  .card-avatar {
+    @apply border rounded-full;
+    background-color: var(--color-icon-bg);
+    border-color: var(--color-card-border);
+    color: var(--color-icon-fg);
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease;
+  }
+
+  .theme-page {
+    background-color: var(--color-page-bg);
+    transition: background-color 220ms ease;
+  }
+
+  .dot-inactive {
+    background-color: var(--color-card-border-strong);
+    transition: background-color 220ms ease;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: var(--color-focus-ring);
+    --tw-ring-offset-color: var(--color-page-bg);
+  }
+
+  /* Input Styles */
+  .input {
+    @apply w-full rounded-md border border-gray-300 px-3 py-2 text-ink bg-white placeholder:text-gray-400 focus:border-brand focus:ring-1 focus:ring-brand focus:outline-none transition;
+  }
+  
+  .dark .input {
+    @apply border-slate-600 bg-slate-800 text-slate-100 placeholder:text-slate-400;
+  }
+
+  /* Section Styles */
+  .section-gradient-hero {
+    @apply w-full bg-gradient-to-br from-blue-900 to-slate-900 rounded-none;
+  }
+
+  .section-gradient-about {
+    @apply w-full bg-gradient-to-br from-indigo-900 via-slate-900 to-indigo-800 rounded-none;
+  }
+
+  .section-slate {
+    @apply w-full bg-slate-100;
+  }
+  
+  .dark .section-slate {
+    @apply bg-slate-900;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply text-ink hover:text-brand transition text-sm font-medium;
+  }
+  
+  .dark .nav-link {
+    @apply text-slate-300 hover:text-brand-light;
+  }
+
+  /* Badge/Tag Styles */
+  .badge-brand {
+    @apply text-xs px-2 py-1 rounded-full bg-brand text-white;
+  }
+  
+  .badge-light {
+    @apply text-xs px-2 py-1 rounded-full bg-brand-light text-brand;
+  }
+  
+  .dark .badge-light {
+    @apply bg-slate-700 text-brand-light;
+  }
+  /* Glassy Card System */
+  .card-glass {
+    @apply relative overflow-hidden rounded-2xl border transition-all duration-300;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  }
+
+  .dark .card-glass {
+    background: rgba(17, 24, 39, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card-glass-interactive {
+    @apply hover:-translate-y-1;
+  }
+  
+  .card-glass-interactive:hover {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(37, 99, 235, 0.3); /* Brand color hint */
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+  }
+
+  .dark .card-glass-interactive:hover {
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(96, 165, 250, 0.3);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer utilities {
+  /* Smooth transition for theme changes */
+  .theme-transition {
+    @apply transition-colors duration-200;
+  }
+
+  .theme-transition-surface {
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
+  }
+
+  .pt-safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .pb-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

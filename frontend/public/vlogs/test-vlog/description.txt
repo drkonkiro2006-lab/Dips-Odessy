@@ -1,0 +1,3 @@
+This is a manually added vlog to test the dynamic loading system.
+If you see this, the system is working correctly!
+No build step was required.
